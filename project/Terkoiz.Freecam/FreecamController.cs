@@ -60,6 +60,11 @@ namespace Terkoiz.Freecam
                 ToggleCamera();
             }
 
+            if (FreecamPlugin.ToggleFreecamControls.Value.IsDown())
+            {
+                ToggleCameraControls();
+            }
+
             if (FreecamPlugin.TeleportToCamera.Value.IsDown())
             {
                 MovePlayerToCamera();
@@ -195,6 +200,25 @@ namespace Terkoiz.Freecam
 
             localPlayer.PointOfView = EPointOfView.FirstPerson;
         }
+
+        /// <summary>
+        /// A helper method to toggle the Freecam Camera Controls
+        /// </summary>
+        private void ToggleCameraControls()
+        {
+            if (_freeCamScript.IsActive) 
+            {
+                _freeCamScript.IsActive = false;
+                _gamePlayerOwner.enabled = true;
+            }
+            else 
+            {
+                _freeCamScript.IsActive = true;
+                _gamePlayerOwner.enabled = false;
+            }
+
+        }
+
 
         /// <summary>
         /// Gets the current <see cref="Player"/> instance if it's available
