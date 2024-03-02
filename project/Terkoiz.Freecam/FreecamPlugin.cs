@@ -20,6 +20,7 @@ namespace Terkoiz.Freecam
         // Keyboard shortcut config entries
         private const string KeybindSectionName = "Keybinds";
         internal static ConfigEntry<KeyboardShortcut> ToggleFreecamMode;
+        internal static ConfigEntry<KeyboardShortcut> ToggleFreecamControls;
         internal static ConfigEntry<KeyboardShortcut> TeleportToCamera;
         internal static ConfigEntry<KeyboardShortcut> ToggleUi;
 
@@ -66,6 +67,12 @@ namespace Terkoiz.Freecam
                 "Toggle Freecam",
                 new KeyboardShortcut(KeyCode.KeypadPlus),
                 "The keyboard shortcut that toggles Freecam");
+
+            ToggleFreecamControls = Config.Bind(
+                KeybindSectionName,
+                "ToggleFreecamControls",
+                new KeyboardShortcut(KeyCode.KeypadPeriod),
+                "The keyboard shortcut that toggles Freecam Controls");
 
             TeleportToCamera = Config.Bind(
                 KeybindSectionName,
