@@ -70,7 +70,7 @@ namespace Terkoiz.Freecam
 
             ToggleFreecamControls = Config.Bind(
                 KeybindSectionName,
-                "ToggleFreecamControls",
+                "Toggle Freecam Controls",
                 new KeyboardShortcut(KeyCode.KeypadPeriod),
                 "The keyboard shortcut that toggles Freecam Controls");
 
