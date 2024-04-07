@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net471</TargetFramework>
     <Version>1.4.2</Version>
     <Authors>Terkoiz, Kobrakon, CWX</Authors>
     <RepositoryUrl>https://dev.sp-tarkov.com/Terkoiz/Freecam</RepositoryUrl>
