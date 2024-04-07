@@ -34,6 +34,11 @@ namespace Terkoiz.Freecam
 
             // Get Player UI
             _playerUi = Singleton<CommonUI>.Instance.EftBattleUIScreen;
+            if (_playerUi == null)
+            {
+                FreecamPlugin.Logger.LogError("Failed to locate player UI");
+                return;
+            }
 
             // Add Freecam script to main camera in scene
             _freeCamScript = _mainCamera.AddComponent<Freecam>();
@@ -126,12 +131,6 @@ namespace Terkoiz.Freecam
             // Check if we're currently in a raid
             if (GetLocalPlayerFromWorld() == null)
                 return;
-
-            if (_playerUi == null)
-            {
-                FreecamPlugin.Logger.LogError("Failed to locate player UI");
-                return;
-            }
 
             _playerUi.gameObject.SetActive(_uiHidden);
             _uiHidden = !_uiHidden;
