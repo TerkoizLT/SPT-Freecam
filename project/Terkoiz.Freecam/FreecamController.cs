@@ -236,7 +236,6 @@ namespace Terkoiz.Freecam
         {
             // Destroy FreeCamScript before FreeCamController if exists
             Destroy(_freeCamScript);
-            Destroy(this);
         }
     }
 }
