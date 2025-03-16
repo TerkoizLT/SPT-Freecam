@@ -1,5 +1,6 @@
 # Custom ignores
 project/References/EFT_Managed/*
+project/References/SPT/*
 
 # Allow these files, despite the rules above
 !project/References/EFT_Managed/.keep

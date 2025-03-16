@@ -10,9 +10,10 @@ namespace Terkoiz.Freecam
 {
     public class FreecamController : MonoBehaviour
     {
-        private GameObject _mainCamera;
-        private Freecam _freeCamScript;
+        private static Freecam _freeCamScript;
 
+        private GameObject _mainCamera;
+        
         private EftBattleUIScreen _playerUi;
         private bool _uiHidden;
 
@@ -20,6 +21,8 @@ namespace Terkoiz.Freecam
 
         private Vector3? _lastPosition;
         private Quaternion? _lastRotation;
+
+        public static bool IsFreeCamScriptActive => _freeCamScript.IsActive;
 
         [UsedImplicitly]
         public void Start()

@@ -7,7 +7,7 @@ using KeyboardShortcut = BepInEx.Configuration.KeyboardShortcut;
 
 namespace Terkoiz.Freecam
 {
-    [BepInPlugin("com.terkoiz.freecam", "Terkoiz.Freecam", "1.4.5")]
+    [BepInPlugin("com.terkoiz.freecam", "Terkoiz.Freecam", "1.5.0")]
     public class FreecamPlugin : BaseUnityPlugin
     {
         internal new static ManualLogSource Logger { get; private set; }
@@ -46,6 +46,7 @@ namespace Terkoiz.Freecam
 
             new FreecamPatch().Enable();
             new FallDamagePatch().Enable();
+            new CameraForceSetPositionPatch().Enable();
         }
 
         private void InitConfiguration()

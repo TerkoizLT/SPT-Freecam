@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <Reference Include="Aki.Reflection">
-      <HintPath>..\References\SPT\spt-reflection.dll</HintPath>
+	  <HintPath>..\References\SPT\spt-reflection.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
@@ -30,6 +30,10 @@
     <Reference Include="Comfort.Unity">
       <HintPath>..\References\EFT_Managed\Comfort.Unity.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>..\References\EFT_Managed\Sirenix.Serialization.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\References\EFT_Managed\UnityEngine.dll</HintPath>
